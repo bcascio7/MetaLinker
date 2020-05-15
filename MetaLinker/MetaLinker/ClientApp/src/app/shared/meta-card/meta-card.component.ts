@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { MetaInfo } from '../../core/classes/MetaInfo.class';
+import { MetaInfo } from '../../core/classes/meta-info.class';
 
 @Component({
   selector: 'app-meta-card',

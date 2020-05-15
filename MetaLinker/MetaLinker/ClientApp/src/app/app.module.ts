@@ -12,6 +12,10 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { MetaCardComponent } from './shared/meta-card/meta-card.component';
 import { MetaCardListComponent } from './shared/meta-card-list/meta-card-list.component';
+import { CategoryCardComponent } from './shared/category-card/category-card.component';
+import { MetaFormComponent } from './meta-form/meta-form.component';
+import { CategoryCardListComponent } from './shared/category-card-list/category-card-list.component';
+import { NewMetaLookupComponent } from './shared/new-meta-lookup/new-meta-lookup.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { MetaCardListComponent } from './shared/meta-card-list/meta-card-list.co
     CounterComponent,
     FetchDataComponent,
     MetaCardComponent,
-    MetaCardListComponent
+    MetaCardListComponent,
+    CategoryCardComponent,
+    MetaFormComponent,
+    CategoryCardListComponent,
+    NewMetaLookupComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -31,7 +39,7 @@ import { MetaCardListComponent } from './shared/meta-card-list/meta-card-list.co
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'fetch-data', component: FetchDataComponent }
     ])
   ],
   providers: [],

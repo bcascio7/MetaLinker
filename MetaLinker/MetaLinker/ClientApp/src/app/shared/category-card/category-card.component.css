@@ -1,0 +1,12 @@
+.category-title {
+    margin-top: -2.5rem;
+    font-size: 1.5rem;
+}
+
+.category {
+    box-shadow : 0 .5rem 1rem rgba(0,0,0,.3)!important
+}
+
+.category:hover {
+    border: 1px solid black;
+}

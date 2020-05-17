@@ -1,12 +1,20 @@
-.category-title {
-    margin-top: -2.5rem;
-    font-size: 1.5rem;
-}
-
 .category {
     box-shadow : 0 .5rem 1rem rgba(0,0,0,.3)!important
 }
 
-.category:hover {
+.category:hover .category-image{
     border: 1px solid black;
+    transition: 0.5s;
+    filter: brightness(0.4);
+}
+
+.category-title {
+    color: white;
+    opacity: 0;
+}
+
+.category:hover .category-title {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
 }

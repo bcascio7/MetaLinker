@@ -16,6 +16,8 @@ import { CategoryCardComponent } from './shared/category-card/category-card.comp
 import { MetaFormComponent } from './meta-form/meta-form.component';
 import { CategoryCardListComponent } from './shared/category-card-list/category-card-list.component';
 import { NewMetaLookupComponent } from './shared/new-meta-lookup/new-meta-lookup.component';
+import { MetasComponent } from './metas/metas.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { NewMetaLookupComponent } from './shared/new-meta-lookup/new-meta-lookup
     CategoryCardComponent,
     MetaFormComponent,
     CategoryCardListComponent,
-    NewMetaLookupComponent
+    NewMetaLookupComponent,
+    MetasComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -39,7 +43,9 @@ import { NewMetaLookupComponent } from './shared/new-meta-lookup/new-meta-lookup
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent }
+      { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'metas', component: MetasComponent },
+      { path: 'new-meta', component: MetaFormComponent }
     ])
   ],
   providers: [],

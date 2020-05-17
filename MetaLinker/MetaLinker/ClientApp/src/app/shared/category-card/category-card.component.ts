@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CategoryInfo } from 'src/app/core/classes/category-info';
+import { MetaService } from 'src/app/core/services/meta.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-category-card',
@@ -9,14 +11,17 @@ import { CategoryInfo } from 'src/app/core/classes/category-info';
 export class CategoryCardComponent implements OnInit {
   @Input() categoryInfo: CategoryInfo;
   
-  constructor() { }
+  constructor(private metaService: MetaService, private router: Router) { }
 
   ngOnInit() {
-    console.log(this.categoryInfo);
-    
+
   }
 
   selectCategory(category) {
-    console.log(category);
+    this.metaService.getMetasByCategory(category).subscribe((res) => {
+       this.router.navigate(['metas']);
+    }, (err) => {
+      console.log(`Error retrieving new list of meta tags by category`);
+    });
   }
 }

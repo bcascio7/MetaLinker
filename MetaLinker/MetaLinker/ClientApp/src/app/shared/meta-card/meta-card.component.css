@@ -1,0 +1,23 @@
+.meta{
+    box-shadow : 0 .5rem 1rem rgba(0,0,0,.3)!important
+}
+
+.meta-info {
+    color: white;
+    opacity: 0;
+}
+
+.meta:hover .meta-image {
+    transition: 0.5s;
+    filter: brightness(0.4);
+}
+
+.meta:hover .meta-info {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.meta .btn {
+    margin-left: 1.5rem;
+}

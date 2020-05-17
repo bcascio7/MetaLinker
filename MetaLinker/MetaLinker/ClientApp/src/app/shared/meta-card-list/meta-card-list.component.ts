@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MetaInfo } from '../../core/classes/meta-info.class';
+import { MetaService } from 'src/app/core/services/meta.service';
 
 @Component({
   selector: 'app-meta-card-list',
@@ -10,8 +11,7 @@ export class MetaCardListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.metaList);
   }
 
-  @Input() metaList: MetaInfo[]
+  @Input() metas: MetaInfo[];
 }

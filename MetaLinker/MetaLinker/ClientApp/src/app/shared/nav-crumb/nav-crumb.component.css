@@ -1,0 +1,8 @@
+.crumb:hover{
+    text-decoration: none;
+}
+
+.lastCrumb {
+    cursor: default;
+    color: black;
+}

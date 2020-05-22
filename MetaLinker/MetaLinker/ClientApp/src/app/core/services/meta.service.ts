@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { MetaInfo } from '../classes/meta-info.class';
 import { Observable, of } from 'rxjs';
 import { CategoryInfo } from '../classes/category-info';
-import { ConsoleReporter } from 'jasmine';
 
 @Injectable({
   providedIn: 'root'

@@ -1,0 +1,11 @@
+<div class="row ml-1">
+    <h2>
+        <a routerLink="/" routerLinkActive="active" class="crumb">CATEGORIES</a>
+    </h2>
+    <div *ngFor="let route of routes; let last = last" class="row ml-2">
+        <fa-icon [icon]="angleRight" style="margin-top: 0.3rem" size="2x mx-2"></fa-icon>
+        <h2>
+            <a routerLink={{route}} routerLinkActive="active" class="crumb" [ngClass]="{lastCrumb: last}">{{route.toUpperCase()}}</a>
+        </h2>
+    </div>
+</div>

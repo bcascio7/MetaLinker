@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FontAwesomeModule} from '@fortawesome/angular-fontawesome'
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -18,6 +19,7 @@ import { CategoryCardListComponent } from './shared/category-card-list/category-
 import { NewMetaLookupComponent } from './shared/new-meta-lookup/new-meta-lookup.component';
 import { MetasComponent } from './metas/metas.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { NavCrumbComponent } from './shared/nav-crumb/nav-crumb.component';
 
 @NgModule({
   declarations: [
@@ -33,13 +35,15 @@ import { CategoriesComponent } from './categories/categories.component';
     CategoryCardListComponent,
     NewMetaLookupComponent,
     MetasComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    NavCrumbComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
     NgbModule,
+    FontAwesomeModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
